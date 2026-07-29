@@ -20,12 +20,12 @@ function trackScrollPos() {
 function toggleNavbarShadow() {
     const nav = document.querySelector('nav');
     if (window.scrollY > 80) {
-        nav.style.paddingTop = '1.2rem';
-        nav.style.paddingBottom = '1.2rem';
+        nav.style.paddingTop = '0.8rem';
+        nav.style.paddingBottom = '0.8rem';
         nav.style.boxShadow = '0 3px 4px -1px rgba(0, 0, 0, 0.10)';
     } else {
-        nav.style.paddingTop = '1.6rem';
-        nav.style.paddingBottom = '1.6rem';
+        nav.style.paddingTop = '1.25rem';
+        nav.style.paddingBottom = '1.25rem';
         nav.style.removeProperty('box-shadow');
     }
 }
