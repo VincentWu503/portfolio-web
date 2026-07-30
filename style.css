@@ -47,6 +47,7 @@ li {
 html {
     height: 100%;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -129,10 +130,10 @@ a.active {
     background-size: cover;
 }
 
-#about-grid-container {
+#about-container {
     display: flex;
     justify-content: space-between;
-    gap: 4rem;
+    gap: 3rem;
 }
 
 #about-contents {
@@ -140,6 +141,10 @@ a.active {
     justify-content: space-between;
     flex-direction: column;
     gap: 2rem;
+}
+
+#pas-foto-container {
+    padding-top: 4rem;
 }
 
 #pas-foto {
@@ -218,13 +223,17 @@ footer {
 }
 
 @media only screen and (min-width: 992px) {
+    #pas-foto-container {
+        padding: 0;
+    }
+
     #pas-foto {
         max-width: 25vw;
     }
 }
 
 @media only screen and (max-width: 992px) {
-    #about-grid-container {
+    #about-container {
         flex-direction: column-reverse;
     }
 
