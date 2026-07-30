@@ -11,6 +11,7 @@
     --accent-text: #040F16;
     --danger: #B80C09;
     --danger-text: #FBFBFF;
+    --hr-color: #2c2c2d2c;
 }
 
 *,::after,::before {
@@ -26,9 +27,13 @@ h1 {
     font-size: clamp(1.2rem, 3vw + 1rem, 3rem);
 }
 
-a, p {
+a, p, h3 {
     font-size: clamp(min(2.8vw, 1rem), 2vw + 0.1rem, max(1.2vw, 1rem));
     color: var(--bg-alt);
+}
+
+.project-link a {
+    font-size: clamp(min(2vw, 0.6rem), 2vw + 0.1rem, max(1.2vw, 1rem));
 }
 
 #text-logo {
@@ -40,7 +45,7 @@ a {
     text-decoration: none;
 }
 
-li {
+.nav-lists li {
     list-style: none;
 }
 
@@ -131,6 +136,8 @@ a.active {
 
 .section-container {
     width: 70%;
+    padding-top: 2em;
+    padding-bottom: 2em;
 }
 
 /* ABOUT/LANDING PAGE PAGE */
@@ -169,6 +176,7 @@ a.active {
     border: 2px solid #FBFBFF;
 }
 
+/* PILL BUTTON */
 .pill {
     color: #FBFBFF;
     font-weight: 500;
@@ -189,6 +197,57 @@ a.active {
     background-color: #00afe0;
 }
 
+/* PROJECT LIST */
+.project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0.8rem 0;
+}
+
+.project-list-content {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 2vw;
+    padding-bottom: 1em;
+    border-bottom: 1px solid var(--hr-color);
+}
+
+.project-link {
+    padding: 1vh;
+    text-decoration-line: underline;
+}
+
+.project-content-text {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+/* Project image */
+.image {
+    max-width: clamp(25vw, 35vw, 40vw);
+    display: block;
+    margin: 0 auto;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.techstack-tag {
+    border: max(1px, 0.1em) solid var(--accent);
+    display: inline-block;
+    padding: 0.4em 0.8em;
+    border-radius: 999em;
+    font-weight: bold;
+    font-size: clamp(0.5rem, 1.5vw + 0.1rem, 0.8rem);
+}
+
 /* FOOTER */
 footer {
     padding-bottom: 1.2rem;
@@ -197,7 +256,7 @@ footer {
     text-align: center;
     margin-top: auto;
     border-top: 1px solid;
-    border-top-color: #040f162c;
+    border-top-color: var(--hr-color);
 }
 
 /* RESPONSIF */
@@ -267,6 +326,16 @@ footer {
 
 @media only screen and (max-width: 992px) {
     #about-container {
+        flex-direction: column-reverse;
+    }
+
+    .image {
+        max-width: clamp(50vw, 60vw, 80vw);
+        display: block;
+        margin: 0 auto;
+    }
+
+    .project-list-content {
         flex-direction: column-reverse;
     }
 
