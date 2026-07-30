@@ -30,5 +30,17 @@ function toggleNavbarShadow() {
     }
 }
 
+const hamburger = document.getElementById('hamburger');
+const navLists = document.querySelector('.nav-lists');
+hamburger.addEventListener('click', () => {
+    navLists.classList.toggle('show');
+
+    if(navLists.classList.contains('show')) {
+        hamburger.style.transform = "rotate(90deg)";
+    } else {
+        hamburger.style.transform = "rotate(0deg)";
+    }
+});
+
 window.addEventListener("scroll", trackScrollPos);
 window.addEventListener("scroll", toggleNavbarShadow);  
