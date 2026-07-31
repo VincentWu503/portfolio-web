@@ -1,5 +1,6 @@
 const sections = document.querySelectorAll("section[id].content");
 
+// ACTIVE UNDERLINE
 function trackScrollPos() {
     const currY = window.scrollY;
 
@@ -40,6 +41,14 @@ hamburger.addEventListener('click', () => {
     } else {
         hamburger.style.transform = "rotate(0deg)";
     }
+});
+
+// TOGGLE DARK MODE
+const darkButton = document.getElementById('dark-mode-btn');
+darkButton.addEventListener('click', () => {
+    let body = document.body;
+
+    body.classList.toggle("dark-mode");
 });
 
 window.addEventListener("scroll", trackScrollPos);
