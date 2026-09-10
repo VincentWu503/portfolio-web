@@ -31,7 +31,7 @@ h1 {
     font-size: clamp(1.2rem, 3vw + 1rem, 3rem);
 }
 
-a, p, h3 {
+a, p, h2, h3 {
     font-size: clamp(min(2.8vw, 1rem), 2vw + 0.1rem, max(1.2vw, 1rem));
     color: var(--text);
 }
@@ -462,10 +462,6 @@ footer {
     }
 }
 
-@media only screen and (min-width: 768px) {
-
-}
-
 @media only screen and (min-width: 992px) {
     #pas-foto-container {
         padding: 0;
@@ -498,6 +494,15 @@ footer {
         max-width: clamp(50vw, 60vw, 80vw);
         display: block;
         margin: 0 auto;
+    }
+
+    .education-content {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas:
+            "school-name"
+            "school-logo"
+            "school-activity-info";
     }
 
     .project-list-content {
